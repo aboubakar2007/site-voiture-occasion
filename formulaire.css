@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Geologica", serif
+}
+
+body {
+    background-color: rgb(99, 102, 202);
+    background-image: url();
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.input {
+    margin-top: 15px;
+}
+
+section {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 60px 60px;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    border: transparent;
+    padding: 10px;
+}
+
+.option-box {
+    margin-top: 15px;
+    text-align: start;
+}
+
+select {
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+}
+
+.btn-sub {
+    margin-top: 10px;
+    text-align: end;
+}
+
+.btn-sub button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-sub button:hover {
+    color: white;
+    border: 2px solid rgb(167, 162, 162);
+    background-color: rgb(108, 108, 238);
+    transform: scale(1.1);
+    transition: 0.4s ease-in-out;
+
+}
+
+input:hover {
+    border: 2px solid rgb(182, 176, 176);
+}
+
+.retour {
+    margin-top: 20px;
+}

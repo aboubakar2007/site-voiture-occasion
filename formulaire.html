@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulaire.css">
+</head>
+
+<body>
+    <section>
+        <h1>commender votre véhicule</h1>
+        <form action="commander">
+            <div class="input-box">
+                <div class="input">
+                    <input type="text" placeholder="nom complet" required>
+                </div>
+                <div class="input">
+                    <input type="tel" placeholder="numéro de téléphopne" required>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="adresse mail" required>
+                </div>
+            </div>
+            <div class="option-box">
+                <select name="article" id="article">
+                    <option value="">BMW</option>
+                    <option value="">AUDI</option>
+                    <option value="">lamborghini</option>
+                    <option value="">TOYOTA</option>
+                    <option value="">Renault</option>
+                    <option value="">Ford</option>
+                </select>
+            </div>
+            <div class="btn-sub">
+                <button type="submit" onclick="alert('votre achat a été éfectué avec succès')">commander</button>
+            </div>
+
+            <div class="retour">
+                <a href="index.html">retour à la page d'accueil</a>
+            </div>
+        </form>
+
+    </section>
+</body>
+
+</html>
