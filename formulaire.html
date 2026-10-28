@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CarZone — Commander</title>
     <link rel="stylesheet" href="formulaire.css">
 </head>
 
 <body>
     <section>
-        <h1>commender votre véhicule</h1>
-        <form action="commander">
+        <a href="index.html" class="logo-site">Car<span>Zone</span></a>
+        <h1>Commander votre véhicule</h1>
+        <form id="form-commande">
             <div class="input-box">
                 <div class="input">
                     <input type="text" placeholder="nom complet" required>
                 </div>
                 <div class="input">
-                    <input type="tel" placeholder="numéro de téléphopne" required>
+                    <input type="tel" placeholder="numéro de téléphone" required>
                 </div>
                 <div class="input">
                     <input type="email" placeholder="adresse mail" required>
@@ -34,15 +35,22 @@
                 </select>
             </div>
             <div class="btn-sub">
-                <button type="submit" onclick="alert('votre achat a été éfectué avec succès')">commander</button>
+                <button type="submit">commander</button>
             </div>
 
             <div class="retour">
                 <a href="index.html">retour à la page d'accueil</a>
             </div>
         </form>
-
+        <p class="confirmation" id="confirmation" hidden>Votre commande a été effectuée avec succès. Nous vous contacterons très vite.</p>
     </section>
+    <script>
+        document.getElementById("form-commande").addEventListener("submit", (e) => {
+            e.preventDefault();
+            e.target.reset();
+            document.getElementById("confirmation").hidden = false;
+        });
+    </script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CarZone — Contact</title>
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -13,25 +13,26 @@
 
 <body>
     <div class="video">
-        <video src="vidéo/vidéo-aaccueil.mp4" autoplay muted loop></video>
+        <video src="vidéo/vidéo-aaccueil.mp4" autoplay muted loop playsinline></video>
         <section>
-            <h1>NOUS CONTACTER</h1>
-            <form action="">
+            <a href="index.html" class="logo-site">Car<span>Zone</span></a>
+            <h1>Nous contacter</h1>
+            <form id="form-contact">
                 <div class="input-box">
-                    <input type="text" placeholder="nom" required>
+                    <input type="text" placeholder="nom" aria-label="Nom" required>
                     <div class="logo"><i class="fa-solid fa-user"></i></div>
                 </div>
 
                 <div class="input-box">
-                    <input type="text" placeholder="prenom(s)" required>
-                    <div class="logo2"><i class="fa-solid fa-lock"></i></div>
+                    <input type="text" placeholder="prénom(s)" aria-label="Prénom(s)" required>
+                    <div class="logo2"><i class="fa-solid fa-user"></i></div>
                 </div>
                 <div class="txt">
-                    <textarea name="" id="" required>message...</textarea>
+                    <textarea name="message" placeholder="Votre message..." aria-label="Message" required></textarea>
                 </div>
                 <div class="bouton"><button type="submit">envoyer</button></div>
 
-                <div class="revenir"> <a href="index.html">revenir à la page d'accuiel</a>
+                <div class="revenir"> <a href="index.html">revenir à la page d'accueil</a>
 
                 </div>
                 <!-- <div class="revenir2">
@@ -39,8 +40,16 @@
                 </div> -->
 
             </form>
+            <p class="confirmation" id="confirmation" hidden>Merci ! Votre message a bien été envoyé.</p>
         </section>
     </div>
+    <script>
+        document.getElementById("form-contact").addEventListener("submit", (e) => {
+            e.preventDefault();
+            e.target.reset();
+            document.getElementById("confirmation").hidden = false;
+        });
+    </script>
 </body>
 
 </html>

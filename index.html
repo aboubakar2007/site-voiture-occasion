@@ -4,337 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CarZone — Voitures d'occasion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <a href="#accueil" class="logo">Car<span>Zone</span></a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#accueil" class="actif"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="#vehic-phare"><i class="fa-solid fa-car"></i> Véhicules</a></li>
+                <li><a href="#services"><i class="fa-solid fa-gear"></i> Services</a></li>
+                <li><a href="catalogue.html"><i class="fa-solid fa-book"></i> Catalogue</a></li>
+                <li><a href="contact.html" class="contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-    <div class="global video" id="accueil">
-        <video src="vidéo/181537-866999852_small.mp4" muted autoplay loop id="vid"></video>
-
-
-
-
-        <header>
-            <nav>
-                <h1>Car<span>Zone</span></h1>
-                <ul>
-                    <li><a href="#accueil" class="accueil"><i class="fa-solid fa-house"
-                                style="margin-right: 10px;"></i>accueil</a>
-                    </li>
-                    <li><a href="#vehic-phare"><i class="fa-solid fa-car" style="margin-right: 10px;"></i>véhicules</a>
-                    </li>
-                    <li><a href="catalogue.html"><i class="fa-solid fa-square-plus"
-                                style="margin-right: 10px;"></i>catalogue</a></li>
-                    <li><a href="contact.html"><i class="fa-solid fa-address-book"
-                                style="margin-right: 10px;"></i>conntact</a></li>
-                </ul>
-            </nav>
-
-        </header>
-
+    <div class="global" id="accueil">
+        <video src="vidéo/181537-866999852_small.mp4" muted autoplay loop playsinline id="vid"></video>
         <div class="texte-accueil">
+            <span class="badge">Vente de voitures d'occasion</span>
             <h1>Bienvenue chez Car<span>Zone</span></h1>
-            <p>vente de voiture d'occasion</p>
-            <div class="bouton-accueil">
-
-                <button onclick='vid.src="vidéo/181537-866999852_small.mp4"'>1</button>
-                <button onclick='vid.src="vidéo/vidéo-aaccueil.mp4"'>2</button>
+            <p>Trouvez votre voiture idéale au meilleur prix.</p>
+            <div class="boutons">
+                <a href="catalogue.html" class="btn btn-rouge">Voir le catalogue</a>
+                <a href="contact.html" class="btn btn-contour">Nous contacter</a>
             </div>
         </div>
-        <div class="accueil-pied">
-            <p>Trouvez votre voiture idéale au meilleur prix</p>
+        <div class="bouton-accueil" aria-label="Changer de vidéo">
+            <button class="actif" data-video="vidéo/181537-866999852_small.mp4" aria-label="Vidéo 1"></button>
+            <button data-video="vidéo/vidéo-aaccueil.mp4" aria-label="Vidéo 2"></button>
         </div>
     </div>
 
-    <section id="vehic-phare">
-        <h2><i class="fa-solid fa-car-on" style="margin-right: 10px;"></i>Nos Véhicules Phares</h2>
+    <div class="chiffres">
+        <div><strong>2010</strong><span>Depuis</span></div>
+        <div><strong>80</strong><span>Modèles au catalogue</span></div>
+        <div><strong>10</strong><span>Marques</span></div>
+        <div><strong>4</strong><span>Services exclusifs</span></div>
+    </div>
 
+    <section id="vehic-phare" class="bloc">
+        <div class="titre-section">
+            <span>Sélection du moment</span>
+            <h2>Nos véhicules phares</h2>
+        </div>
         <div class="card-container">
-            <a href="formulaire.html">
-                <figure class="lambo">
-                    <img src="images/voiture phares/lambo-uru-orange.webp" alt="" id="lambo">
-                    <a class="info">Nouveauté</a>
-                    <figcaption>
-                        <h3>Lamborghini urus</h3>
-                        <p class="prix">215 000 €</p>
-                        <div class="color-container">
-                            <button class="voiture-color"
-                                onclick='lambo.src="    images/voiture phares/lambo-uru-orange.webp"'></button>
-                            <button class="voiture-color"
-                                onclick='lambo.src="images/voiture phares/lambo-urus-jaune.webp"'></button>
-                            <button class="voiture-color"
-                                onclick='lambo.src="images/voiture phares/lambo-urus-noir.png"'></button>
-                        </div>
-
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="formulaire.html">
-                <figure class="gle">
-                    <img src="images/voiture phares/GLE400-blanc-removebg-preview.png" alt="" id="gle">
-                    <a class="info">Nouveauté</a>
-                    <figcaption>
-                        <h3>GLE 400</h3>
-                        <p class="prix"> 99 550 € </p>
-                        <div class="color-container">
-                            <button class="voiture-color"
-                                onclick='gle.src="images/voiture phares/GLE400-blanc-removebg-preview.png"'></button>
-                            <button class="voiture-color"
-                                onclick='gle.src="images/voiture phares/gle400-ROUGE-removebg-preview.png"'></button>
-                            <button class="voiture-color"
-                                onclick='gle.src="images/voiture phares/GLE400-noir-removebg-preview.png"'></button>
-                        </div>
-
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="formulaire.html">
-                <figure class="toyota">
-                    <img src="images/voiture phares/toyota-fortuner-blanc.png" alt="" id="toyota">
-                    <a class="info">Promotion</a>
-                    <figcaption>
-                        <h3>toyota fortuner</h3>
-                        <p class="prix">34 000€</p>
-                        <div class="color-container">
-                            <button class="voiture-color"
-                                onclick='toyota.src="images/voiture phares/toyota-fortuner-blanc.png"'></button>
-                            <button class="voiture-color"
-                                onclick='toyota.src="images/voiture phares/toyota-fortuner-blue.png"'></button>
-                            <button class="voiture-color"
-                                onclick='toyota.src="images/voiture phares/toyota-fortuner-maron.png"'></button>
-                        </div>
-
-                    </figcaption>
-                </figure>
-            </a>
-
+            <article class="voiture-phare">
+                <span class="info">Nouveauté</span>
+                <a href="formulaire.html" class="voiture-img"><img src="images/voiture phares/lambo-uru-orange.webp" alt="Lamborghini Urus"></a>
+                <div class="voiture-corps">
+                    <h3>Lamborghini Urus</h3>
+                    <p class="prix">215 000 €</p>
+                    <div class="color-container">
+                        <button class="voiture-color actif" style="--c: #ff4d00" data-img="images/voiture phares/lambo-uru-orange.webp" aria-label="Orange"></button>
+                        <button class="voiture-color" style="--c: #ffd400" data-img="images/voiture phares/lambo-urus-jaune.webp" aria-label="Jaune"></button>
+                        <button class="voiture-color" style="--c: #111111" data-img="images/voiture phares/lambo-urus-noir.png" aria-label="Noir"></button>
+                    </div>
+                    <a href="formulaire.html" class="commander">Commander <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="voiture-phare">
+                <span class="info">Nouveauté</span>
+                <a href="formulaire.html" class="voiture-img"><img src="images/voiture phares/GLE400-blanc-removebg-preview.png" alt="Mercedes GLE 400"></a>
+                <div class="voiture-corps">
+                    <h3>Mercedes GLE 400</h3>
+                    <p class="prix">99 550 €</p>
+                    <div class="color-container">
+                        <button class="voiture-color actif" style="--c: #ffffff" data-img="images/voiture phares/GLE400-blanc-removebg-preview.png" aria-label="Blanc"></button>
+                        <button class="voiture-color" style="--c: #e10600" data-img="images/voiture phares/gle400-ROUGE-removebg-preview.png" aria-label="Rouge"></button>
+                        <button class="voiture-color" style="--c: #111111" data-img="images/voiture phares/GLE400-noir-removebg-preview.png" aria-label="Noir"></button>
+                    </div>
+                    <a href="formulaire.html" class="commander">Commander <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="voiture-phare">
+                <span class="info promo">Promotion</span>
+                <a href="formulaire.html" class="voiture-img"><img src="images/voiture phares/toyota-fortuner-blanc.png" alt="Toyota Fortuner"></a>
+                <div class="voiture-corps">
+                    <h3>Toyota Fortuner</h3>
+                    <p class="prix">34 000 €</p>
+                    <div class="color-container">
+                        <button class="voiture-color actif" style="--c: #ffffff" data-img="images/voiture phares/toyota-fortuner-blanc.png" aria-label="Blanc"></button>
+                        <button class="voiture-color" style="--c: #1531d6" data-img="images/voiture phares/toyota-fortuner-blue.png" aria-label="Bleu"></button>
+                        <button class="voiture-color" style="--c: #4a2c14" data-img="images/voiture phares/toyota-fortuner-maron.png" aria-label="Marron"></button>
+                    </div>
+                    <a href="formulaire.html" class="commander">Commander <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
         </div>
         <div class="plus">
-            <a href="catalogue.html"><button>voir plus <i class="fa-solid fa-arrow-right"
-                        style="margin-left:5px;"></i></button></a>
+            <a href="catalogue.html" class="btn btn-contour-sombre">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-
     </section>
 
-    <section id="services">
-        <h1><i class="fa-solid fa-gear" style="margin-right: 10px;"></i>Nos <span>Services</span> Exclusifs</h1>
-
+    <section id="services" class="bloc bloc-sombre">
+        <div class="titre-section">
+            <span>Au-delà de la vente</span>
+            <h2>Nos services exclusifs</h2>
+        </div>
         <div class="fig-container">
-            <a href="formulaire.html" style="text-decoration: none;">
-                <figure>
-                    <img src="images/autres-services/accessoire.jpg" alt="">
-                    <figcaption>
-
-                        <h3>Installation d’accessoires </h3>
-                        <p>Personnalisez votre véhicule avec des accessoires modernes, installés par nos soins pour un
-                            résultat sûr et soigné.</p>
-
-                    </figcaption>
-                </figure>
+            <a href="formulaire.html" class="service">
+                <img src="images/autres-services/accessoire.jpg" alt="">
+                <div class="service-corps">
+                    <h3>Installation d’accessoires</h3>
+                    <p>Personnalisez votre véhicule avec des accessoires modernes, installés par nos soins pour un résultat sûr et soigné.</p>
+                </div>
             </a>
-            <a href="formulaire.html" style="text-decoration: none;">
-                <figure>
-                    <img src="images/autres-services/moteur.jpg" alt="">
-                    <figcaption>
-
-                        <h3>Vente de pièces détachées </h3>
-                        <p>Trouvez rapidement des pièces détachées fiables et garanties pour tous types de véhicules, au
-                            meilleur prix.</p>
-
-                    </figcaption>
-                </figure>
+            <a href="formulaire.html" class="service">
+                <img src="images/autres-services/moteur.jpg" alt="">
+                <div class="service-corps">
+                    <h3>Vente de pièces détachées</h3>
+                    <p>Trouvez rapidement des pièces détachées fiables et garanties pour tous types de véhicules, au meilleur prix.</p>
+                </div>
             </a>
-            <a href="formulaire.html" style="text-decoration: none;">
-                <figure>
-                    <img src="images/autres-services/lavage.jpg" alt="">
-                    <figcaption>
-
-                        <h3>Lavage auto premium </h3>
-                        <p>Offrez à votre véhicule un lavage haut de gamme, intérieur et extérieur, pour une propreté
-                            éclatante et durable.</p>
-
-                    </figcaption>
-                </figure>
+            <a href="formulaire.html" class="service">
+                <img src="images/autres-services/lavage.jpg" alt="">
+                <div class="service-corps">
+                    <h3>Lavage auto premium</h3>
+                    <p>Offrez à votre véhicule un lavage haut de gamme, intérieur et extérieur, pour une propreté éclatante et durable.</p>
+                </div>
             </a>
-            <a href="formulaire.html" style="text-decoration: none;">
-                <figure>
-                    <img src="images/autres-services/vidnage-entretien.jpg" alt="">
-                    <figcaption>
-
-                        <h3>Entretien et réparation </h3>
-                        <p>Nous assurons l’entretien complet de votre véhicule avec des réparations garanties et sans
-                            mauvaise surprise.</p>
-
-                    </figcaption>
-                </figure>
+            <a href="formulaire.html" class="service">
+                <img src="images/autres-services/vidnage-entretien.jpg" alt="">
+                <div class="service-corps">
+                    <h3>Entretien et réparation</h3>
+                    <p>Nous assurons l’entretien complet de votre véhicule avec des réparations garanties et sans mauvaise surprise.</p>
+                </div>
             </a>
         </div>
     </section>
 
-    <section id="marques">
-        <h1>Marques et modèles populaires</h1>
-
+    <section id="marques" class="bloc">
+        <div class="titre-section">
+            <span>Choisissez une marque</span>
+            <h2>Marques et modèles populaires</h2>
+        </div>
         <div class="card-container2">
-
-            <div class="card" onclick='case1.src="images/voitures/audi+a1.png"
-            case2.src="images/voitures/audi+a3.png"
-            case3.src="images/voitures/audi+a4.png"
-            case4.src="images/voitures/audi+a6.png" 
-            case5.src="images/voitures/audi+q3.png"'> <img src="images/marques/audi-logo.png" alt="">
-                <h3>Audi</h3>
-            </div>
-
-            <div class="card" onclick='case1.src="images/voitures/bM/bmw+serie+1.png"
-            case2.src="images/voitures/bM/bmw+serie+3.png" 
-            case3.src="images/voitures/bM/bmw+x1.png"
-            case4.src="images/voitures/bM/bmw+x3.png"
-            case5.src="images/voitures/bM/bmw+x4.png"'> <img src="images/marques/BMW-Logo.png" alt="">
-                <h3>BMW</h3>
-            </div>
-            <div class="card" onclick='case1.src="images/voitures/citro/citroen+c3.png"
-            case2.src="images/voitures/citro/citroen+c3+aircross.png" 
-            case3.src="images/voitures/citro/citroen+c4.png"
-            case4.src="images/voitures/citro/citroen+c4+cactus.png"
-            case5.src="images/voitures/citro/citroen+c5+x.png"'>
-                <img src="images/marques/logo-citroen$.png" alt="">
-                <h3>Citroën</h3>
-            </div>
-            <div class="card" onclick='case1.src="images/voitures/merce/mercedes_benz+cla.png"
-            case2.src="images/voitures/merce/mercedes_benz+classe+a.png" 
-            case3.src="images/voitures/merce/mercedes_benz+classe+c.png"
-            case4.src="images/voitures/merce/mercedes_benz+gla.png"
-            case5.src="images/voitures/merce/mercedes+gle+coupe.png"'>
-                <img src="images/marques/images-removebg-preview (1).png" alt="">
-                <h3>Mercedes</h3>
-            </div>
-            <div class="card" onclick='case1.src="images/voitures/peugeot/peugeot+208+allure.png"
-            case2.src="images/voitures/peugeot/peugeot+308+gti.png" 
-            case3.src="images/voitures/peugeot/peugeot+508.png"
-            case4.src="images/voitures/peugeot/peugeot+2008+gtline.png"
-            case5.src="images/voitures/peugeot/peugeot+3008+allure.png" '>
-                <img src="images/marques/peugot.png" alt="">
-                <h3>Peugeot</h3>
-            </div>
-            <div class="card" onclick='case1.src="images/voitures/Renault/renault+captur.png"
-            case2.src="images/voitures/Renault/renault+clio.png" 
-            case3.src="images/voitures/Renault/renault+kadjar.png"
-            case4.src="images/voitures/Renault/renault+megane.png"
-            case5.src="images/voitures/Renault/renault+twingo.png" '>
-                <img src="images/marques/renault-logo.jpg" alt="">
-                <h3>Renault</h3>
-            </div>
-
+            <button class="marque actif" data-voitures="images/voitures/audi+a1.png|images/voitures/audi+a3.png|images/voitures/audi+a4.png|images/voitures/audi+a6.png|images/voitures/audi+q3.png">
+                <img src="images/marques/audi-logo.png" alt=""><span>Audi</span>
+            </button>
+            <button class="marque" data-voitures="images/voitures/bM/bmw+serie+1.png|images/voitures/bM/bmw+serie+3.png|images/voitures/bM/bmw+x1.png|images/voitures/bM/bmw+x3.png|images/voitures/bM/bmw+x4.png">
+                <img src="images/marques/BMW-Logo.png" alt=""><span>BMW</span>
+            </button>
+            <button class="marque" data-voitures="images/voitures/citro/citroen+c3.png|images/voitures/citro/citroen+c3+aircross.png|images/voitures/citro/citroen+c4.png|images/voitures/citro/citroen+c4+cactus.png|images/voitures/citro/citroen+c5+x.png">
+                <img src="images/marques/logo-citroen$.png" alt=""><span>Citroën</span>
+            </button>
+            <button class="marque" data-voitures="images/voitures/merce/mercedes_benz+cla.png|images/voitures/merce/mercedes_benz+classe+a.png|images/voitures/merce/mercedes_benz+classe+c.png|images/voitures/merce/mercedes_benz+gla.png|images/voitures/merce/mercedes+gle+coupe.png">
+                <img src="images/marques/images-removebg-preview (1).png" alt=""><span>Mercedes</span>
+            </button>
+            <button class="marque" data-voitures="images/voitures/peugeot/peugeot+208+allure.png|images/voitures/peugeot/peugeot+308+gti.png|images/voitures/peugeot/peugeot+508.png|images/voitures/peugeot/peugeot+2008+gtline.png|images/voitures/peugeot/peugeot+3008+allure.png">
+                <img src="images/marques/peugot.png" alt=""><span>Peugeot</span>
+            </button>
+            <button class="marque" data-voitures="images/voitures/Renault/renault+captur.png|images/voitures/Renault/renault+clio.png|images/voitures/Renault/renault+kadjar.png|images/voitures/Renault/renault+megane.png|images/voitures/Renault/renault+twingo.png">
+                <img src="images/marques/renault-logo.jpg" alt=""><span>Renault</span>
+            </button>
         </div>
-
         <div class="voiture-container">
-            <a href="formulaire.html">
-                <figure>
-                    <img src="images/voitures/audi+a1.png" alt="" id="case1">
-                    <figcaption>
-                        <!-- <h3>A1 <br> occasion</h3> -->
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="formulaire.html">
-                <figure>
-                    <img src="images/voitures/audi+a3.png" alt="" id="case2">
-                    <figcaption>
-                        <!-- <h3>A1 <br> occasion</h3> -->
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="formulaire.html">
-                <figure>
-                    <img src="images/voitures/audi+a4.png" alt="" id="case3">
-                    <figcaption>
-                        <!-- <h3>A1 <br> occasion</h3> -->
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="formulaire.html">
-                <figure>
-                    <img src="images/voitures/audi+a6.png" alt="" id="case4">
-                    <figcaption>
-                        <!-- <h3>A1 <br> occasion</h3> -->
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="formulaire.html">
-                <figure>
-                    <img src="images/voitures/audi+q3.png" alt="" id="case5">
-                    <figcaption>
-                        <!-- <h3>A1 <br> occasion</h3> -->
-                    </figcaption>
-                </figure>
-            </a>
-
-
+            <a href="formulaire.html"><img src="images/voitures/audi+a1.png" alt="Modèle de la marque choisie"></a>
+            <a href="formulaire.html"><img src="images/voitures/audi+a3.png" alt="Modèle de la marque choisie"></a>
+            <a href="formulaire.html"><img src="images/voitures/audi+a4.png" alt="Modèle de la marque choisie"></a>
+            <a href="formulaire.html"><img src="images/voitures/audi+a6.png" alt="Modèle de la marque choisie"></a>
+            <a href="formulaire.html"><img src="images/voitures/audi+q3.png" alt="Modèle de la marque choisie"></a>
         </div>
-
-
-
     </section>
-
 
     <footer>
-
         <div class="container-foot">
-
             <div class="nom">
-                <h3>Car<span>Zone</span></h3>
-                <p>
-                    Le meilleur de l'automobile d'occasion depuis 2010. <br> Qualité, transparence et service premium.
-                </p>
+                <a href="#accueil" class="logo">Car<span>Zone</span></a>
+                <p>Le meilleur de l'automobile d'occasion depuis 2010.<br>Qualité, transparence et service premium.</p>
                 <div class="reseaux">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
+                    <a href="" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
-
             <div class="liens">
-                <h3>liens rapides</h3>
-
-                <div class="liste-lien">
-                    <ul>
-                        <li><a href="#accueil">accueil</a></li>
-                        <li><a href="#vehic-phare">véhicules</a></li>
-                        <li><a href="#services">services</a></li>
-                        <li><a href="contact.html">contact</a></li>
-
-                    </ul>
-                </div>
-
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#vehic-phare">Véhicules</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-
             <div class="abonner">
-                <h3>s'abonner</h3>
-
-                <p>Abonnez-vous pour recevoir nos offres exclusives</p>
-
-                <div class="input-box">
-                    <form action="">
-                        <input type="email" placeholder="entrez votre adresse mail" required>
-                        <button type="submit" onclick="alert('vous avez été inscrit avec succès')"><i
-                                class="fa-solid fa-paper-plane"></i></button>
-                    </form>
-                </div>
+                <h3>S'abonner</h3>
+                <p>Abonnez-vous pour recevoir nos offres exclusives.</p>
+                <form id="abonnement">
+                    <input type="email" placeholder="Votre adresse mail" aria-label="Adresse mail" required>
+                    <button type="submit" aria-label="S'abonner"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <p class="merci" id="merci" hidden>Vous avez été inscrit avec succès.</p>
             </div>
-
-
-
-
-
         </div>
-
-
+        <p class="copyright">© CarZone</p>
     </footer>
 
     <script src="script.js"></script>
